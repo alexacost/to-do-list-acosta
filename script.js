@@ -14,17 +14,21 @@ clickButton.onclick = () => {
     document.getElementById("second-container").className = "row content align-items-center justify-content-center"
    }
 }
+list = (trigger) => {
+    
+trigger.onclick = () => {
+    
+    let text = document.getElementById("text")
+    text = text.value
+    let tag = document.createElement("p")
+    var task = document.createTextNode(text)
+    tag.appendChild(task)
+    let element = docuemnt.getElementById("new")
+    element.appendChild(tag)
 
-let input = document.getElementById("toDo")
+}
+}
 
-input.addEventListener("keypress", (e) => {
-    if(e.keyCode === 13) {
-        e.preventDefault()
-        let newInput = document.createElement("input")
-        let element = document.getElementById("new")
-        element.appendChild(newInput)
-    }
-})
+let trigger = document.getElementById("btn-list")
 
-
-
+list(trigger)
