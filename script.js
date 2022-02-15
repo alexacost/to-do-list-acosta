@@ -1,25 +1,34 @@
-const name = prompt("Tell us your name")
-document.getElementById("name").innerHTML = name;
-document.getElementById("name").style.display = "contents";
-document.getElementById("name").style.color = "blue";
+let clickButton = document.getElementById("btn-name")
+clickButton.onclick = () => {
+   let name = document.getElementById("name")
+   name = name.value
+   if (name === "") {
+    let warning = document.getElementById("warning")
+    warning.className = "text-center text-danger mt-5"
+   } else {
+    let hello = document.getElementById("hi")
+    hello.className = "text-primary"
+    hello.innerHTML = name 
+    document.getElementById("first-container").className = "d-none"
+    warning.className = "d-none"
+    document.getElementById("second-container").className = "row content align-items-center justify-content-center"
+   }
+}
+list = (trigger) => {
+    
+trigger.onclick = () => {
+    
+    let text = document.getElementById("text")
+    text = text.value
+    let tag = document.createElement("p")
+    var task = document.createTextNode(text)
+    tag = tag.appendChild(task)
+    let element = document.getElementById("new")
+    element = element.appendChild(tag)
 
+}
+}
 
-document.getElementById("btn-chores").onclick = function ()
-    {   
-        function quantityChores () {
-            let chores = parseInt(prompt("How many task you want to enter?"))
-            console.log(chores)
-            let list = new Array(chores)
-            for(let i=1; i < chores; i++) {
-                let toDo = prompt("Enter your " + i + " chore" )
-                let date = new Date()
-                let month = parseInt(date.getMonth()) + 1
-                list.push(toDo + " this task was created the date " + date.getDate() + "/" + month + "/" + date.getFullYear() )
-            }
-            console.log(list)
-        }
+let trigger = document.getElementById("btn-list")
 
-        
-        quantityChores();
-  
-    }
+list(trigger)
