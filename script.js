@@ -22,9 +22,9 @@ trigger.onclick = () => {
     text = text.value
     let tag = document.createElement("p")
     var task = document.createTextNode(text)
-    tag.appendChild(task)
-    let element = docuemnt.getElementById("new")
-    element.appendChild(tag)
+    tag = tag.appendChild(task)
+    let element = document.getElementById("new")
+    element = element.appendChild(tag)
 
 }
 }
