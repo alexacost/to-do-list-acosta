@@ -20,11 +20,13 @@ trigger.onclick = () => {
     
     let text = document.getElementById("text")
     text = text.value
-    let tag = document.createElement("p")
-    var task = document.createTextNode(text)
-    tag = tag.appendChild(task)
-    let element = document.getElementById("new")
-    element = element.appendChild(tag)
+    let bullet = document.createElement("li") 
+    let task = document.createTextNode(text)
+    bullet.appendChild(task)
+    let currentDiv = document.getElementById("current")
+    let newBullet = document.body.insertBefore(bullet, currentDiv);
+    let list = document.getElementById("current")
+    list.appendChild(newBullet)
 
 }
 }
