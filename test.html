@@ -3,21 +3,18 @@
   <title>||Trabajando con elementos||</title>
 </head>
 <body>
-  <div id="div1">El texto superior se ha creado dinámicamente.</div>
+<button id="btncounter">Click Me!</button>
 </body>
 <script>
-    document.body.onload = addElement;
+  let btn = document.getElementById("btncounter")
+  let counter = 0
+  let list = []
 
-function addElement () {
-  // crea un nuevo div
-  // y añade contenido
-  var newDiv = document.createElement("div");
-  var newContent = document.createTextNode("Hola!¿Qué tal?");
-  newDiv.appendChild(newContent); //añade texto al div creado.
-
-  // añade el elemento creado y su contenido al DOM
-  var currentDiv = document.getElementById("div1");
-  document.body.insertBefore(newDiv, currentDiv);
-}
+  btn.onclick = () => {
+    counter++
+    console.log(counter)
+    list.push("hola")
+    console.log(list)
+  }
 </script>
 </html>

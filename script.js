@@ -1,4 +1,4 @@
-let clickButton = document.getElementById("btn-name")
+let clickButton = document.getElementById("btnName")
 clickButton.onclick = () => {
    let name = document.getElementById("name")
    name = name.value
@@ -14,23 +14,45 @@ clickButton.onclick = () => {
     document.getElementById("second-container").className = "row content align-items-center justify-content-center"
    }
 }
-list = (trigger) => {
-    
-trigger.onclick = () => {
-    
+
+
+let trigger = document.getElementById("btnList")
+let list = []
+let counter = 0
+
+trigger.onclick = () =>  {
+    c = counter++
     let text = document.getElementById("text")
     text = text.value
-    let bullet = document.createElement("li") 
-    let task = document.createTextNode(text)
-    bullet.appendChild(task)
-    let currentDiv = document.getElementById("current")
-    let newBullet = document.body.insertBefore(bullet, currentDiv);
-    let list = document.getElementById("current")
-    list.appendChild(newBullet)
+    list.push(text)
+    localStorage.setItem("counter", c)
+    for (i=0;i<list.length;i++) {
+        localStorage.setItem("task n " + i, list[i])
+    }
+    }
+    quantity = localStorage.getItem("counter")
+    console.log(quantity)
+    // localStorage.setItem("task n " + quantity, list[quantity])
 
-}
-}
 
-let trigger = document.getElementById("btn-list")
+    
+        
 
-list(trigger)
+    // let bullet = document.createElement("li")
+    // let task = document.createTextNode(text)
+    // bullet.appendChild(task)
+    // let currentDiv = document.getElementById("list")
+    // let newBullet = document.body.insertBefore(bullet, currentDiv);
+    // currentDiv.appendChild(newBullet)
+
+
+
+
+
+
+
+
+
+
+
+
