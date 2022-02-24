@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="container">
-        <div class="row align-items-center justify-content-center">
+        <!-- <div class="row align-items-center justify-content-center">
                 <h1 class="text-center mt-5">
                 ¡Welcome <span id="hi" class="d-none">name</span> to your to-do list!
                 </h1>
@@ -25,13 +25,13 @@
             <label for="" class="form-label">Please enter your name before we start!</label>
             <input type="text" class="form-control" id="name" aria-describedby="helpId" placeholder="Juan">
             <small id="warning" class="form-text text-muted d-none">Don't forget to enter your name!</small>
-            <button id="btn-name" class="btn btn-primary align-items-start mt-3" style="width: 18em;">Enter</button>
+            <button id="btnName" class="btn btn-primary align-items-start mt-3" style="width: 18em;">Enter</button>
           </div>
         </div>
-        <p class="text-center d-none" id="warning">
+        <p class="text-center d-none" id="warning"> -->
          
         </p>
-        <div id="second-container" class="d-none">
+        <div id="second-container d-none">
                <div class="d-grid gap-2 custom-margin">
                  <div class="mb-3">
                    <label for="" class="form-label">Enter your first task</label>
@@ -39,12 +39,12 @@
                     <input type="text"
                     class="form-control" name="" id="text" aria-describedby="helpId" placeholder="">
                    </div>
-                   <button type="button" id="btn-list" class="btn btn-primary">Enter</button>
+                   <button type="button" id="btnList" class="btn btn-primary">Enter</button>
                  </div>
                </div>
         </div>
     </div>
-    <ol id="current" class="container"></ol>
+    <ol id="items" class="container"></ol>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
