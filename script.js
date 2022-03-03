@@ -28,8 +28,10 @@ trigger.onclick = () =>  {
         text = text.value
         list.push(text)
         localStorage.setItem("task", JSON.stringify(list))
-        let bullet = document.createElement("li")
+        let bullet = document.createElement("input")
         let task = document.createTextNode(text)
+        bulltet.value = text
+        bullet.id = "listInput"
         bullet.appendChild(task)
         let currentDiv = document.getElementById("items")
         let newBullet = document.body.insertBefore(bullet, currentDiv);
@@ -47,11 +49,16 @@ trigger.onclick = () =>  {
     let chores = JSON.parse(localStorage.getItem("task"))
     
         for (i=0;i<chores.length;i++) {
-            let bullet = document.createElement("li")
+            let bullet = document.createElement("input")
             let task = document.createTextNode(chores[i])
+            bullet.value = chores[i]
+            bullet.id = "listInput"
             bullet.appendChild(task)
             let currentDiv = document.getElementById("items")
             let newBullet = document.body.insertBefore(bullet, currentDiv);
             currentDiv.appendChild(newBullet)
+            
 
     }
+
+    // delete hacer un for con IndexOf para comparar el seleccionado con un if 
