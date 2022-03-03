@@ -15,12 +15,14 @@
 //    }
 // }
 
+// add new
 
 let trigger = document.getElementById("btnList")
 let list = []
 let counter = 0
 let quantity = localStorage.getItem("task")
 trigger.onclick = () =>  {
+    
     if (quantity === null) { 
         let text = document.getElementById("text")
         text = text.value
@@ -40,7 +42,7 @@ trigger.onclick = () =>  {
         list = JSON.parse(localStorage.getItem("task"))
         console.log(list)
     }
-
+    location.reload()
     }
     let chores = JSON.parse(localStorage.getItem("task"))
     
